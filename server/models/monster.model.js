@@ -9,7 +9,7 @@ const MonsterSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    appearance: {
+    firstAppear: {
         type: String,
         required: true
     },
