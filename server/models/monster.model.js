@@ -3,26 +3,27 @@ const mongoose = require('mongoose');
 const MonsterSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
+        required: [true, "Name is required"]
     },
     imgUrl: {
         type: String,
-        required: true
+        required: [true, "img is required"]
     },
     firstAppear: {
         type: String,
-        required: true
+        required: [true, "{PATH} is required"]
     },
     level: {
         type: String,
-        required: true  
+        required: [true, "{PATH} is required"]
     },
     yearCreated: {
         type: Number,
-        required: true
+        required: [true, "{PATH} is required"]
     },
     link: {
-        type: String
+        type: String,
+        required: [true, "{PATH} is required"]
     }
 }, {timestamps: true});
 
