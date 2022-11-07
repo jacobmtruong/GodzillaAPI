@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 mongoose.connect("mongodb://localhost/godzillaAPI", {
     useNewUrlParser: true,
     useUnifiedTopology: true
