@@ -10,7 +10,7 @@ const cors = require('cors');
 // Middleware
 app.use(cors(),express.json(), express.urlencoded({extended: true}));
 
-
+require('./config/mongoose.config')
 
 app.get('/api', (req, res) => res.json("Hello, world!"));
 
