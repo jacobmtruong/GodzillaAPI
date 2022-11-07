@@ -15,7 +15,7 @@ const MonsterSchema = new mongoose.Schema({
     },
     level: {
         type: String,
-        required: true
+        required: true  
     },
     yearCreated: {
         type: Number,

@@ -17,11 +17,18 @@ module.exports = {
             .catch(err => res.json({ message: 'There was an error', serverError: err }))
     },
 
-    // find ONE
-    findMonster: (req, res) => {
+    // find ONE by ID
+    findMonsterByID: (req, res) => {
         Monster.findById(red.params.id)
             .then(monster => res.json(monster))
             .catch(err => res.json({ message: 'There was an error', serverError: err }))
+    },
+
+    // find Monster by name
+    findMonsterByName: (req, res) => {
+        Monster.findById({name: req.params.name})
+        .then(monster => res.json(monster))
+        .catch(err => res.json({ message: 'There was an error', serverError: err }))
     },
 
     //update a monster

@@ -11,6 +11,8 @@ const cors = require('cors');
 app.use(cors(),express.json(), express.urlencoded({extended: true}));
 
 require('./config/mongoose.config')
+require('./routes/monster.routes') (app)
+
 
 app.get('/api', (req, res) => res.json("Hello, world!"));
 
