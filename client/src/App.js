@@ -5,11 +5,9 @@ import Result from './Components/Result';
 
 function App() {
   return (
-    <div className="App">
-      <FormInput />
-
+    <div>
+      <FormInput/>
       <Routes>
-
         <Route path= "/:input" element={<Result/>}/>
 
       </Routes>
