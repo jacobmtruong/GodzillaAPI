@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 const FormInput = () => {
     const [input, setInput] = useState('')
 
-    const redirect = useNavigate()
-
     const submitHandler = (e) => {
         e.preventDefault()
-        redirect ("/" + input)
+        window.open ("/" + input)
     }
 
   return (
