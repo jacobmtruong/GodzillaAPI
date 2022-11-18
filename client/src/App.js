@@ -13,7 +13,7 @@ function App() {
 
         <Route path= "/:input" element={<Monsters/>}/>
 
-        <Route path= "/:input/name/:name" element={<Monster/>}/>
+        <Route path= "/:input/:name" element={<Monster/>}/>
 
       </Routes>
     </div>
