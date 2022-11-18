@@ -1,15 +1,18 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
-import FormInput from './Components/FormInput';
+import FormInput from './Components/displays/FormInput';
 import Monsters from './Components/results/Monsters';
 import Monster from './Components/results/Monster';
+import Banner from './Components/displays/Banner';
 
 function App() {
   return (
     <div>
       
+      <Banner/>
+
       <Routes>
-        <Route path='/' element={<FormInput/>}/>
+        <Route path='/form' element={<FormInput/>}/>
 
         <Route path= "/:input" element={<Monsters/>}/>
 
