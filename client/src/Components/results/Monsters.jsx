@@ -12,7 +12,6 @@ const Monsters = () => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/${input}`)
             .then(res => {
-                // console.log(res.data);
                 let result = res.data
                 for (let i = 0; i < result.length; i++) {
                     delete result[i]["_id"]
