@@ -6,8 +6,10 @@ import Result from './Components/Result';
 function App() {
   return (
     <div>
-      <FormInput/>
+      
       <Routes>
+        <Route path='/' element={<FormInput/>}/>
+
         <Route path= "/:input" element={<Result/>}/>
 
       </Routes>
