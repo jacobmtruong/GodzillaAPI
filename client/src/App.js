@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import FormInput from './Components/FormInput';
-import Result from './Components/Result';
+import Monsters from './Components/results/Monsters';
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
       <Routes>
         <Route path='/' element={<FormInput/>}/>
 
-        <Route path= "/:input" element={<Result/>}/>
+        <Route path= "/:input" element={<Monsters/>}/>
+
+        <Route path= "/:input/:name" element={<Monsters/>}/>
 
       </Routes>
     </div>

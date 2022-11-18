@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect } from 'react'
 
-const Result = () => {
+const Monsters = () => {
 
     const { input } = useParams()
 
@@ -35,4 +35,4 @@ const Result = () => {
     )
 }
 
-export default Result
+export default Monsters
