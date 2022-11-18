@@ -12,6 +12,9 @@ const Monster = () => {
         axios.get(`http://localhost:8000/api/${input}/${name}`)
             .then(res => {
                 let result = res.data
+                if (result.length < 1) {
+                    return setResult({ErrMessage: `${name} is not in our database.`})
+                }
                 for (let i = 0; i < result.length; i++) {
                     delete result[i]["_id"]
                     delete result[i]["createdAt"]
@@ -20,7 +23,9 @@ const Monster = () => {
                 }
                 setResult(result)
             })
-            .catch(err => { console.log(err, { replace: true }) })
+            .catch(err => {
+                console.log(err, { replace: true })
+            })
 
     }, [input])
 
