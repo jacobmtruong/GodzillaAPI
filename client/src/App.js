@@ -21,7 +21,6 @@ function App() {
         <Route path= "/api/:input" element={<Monsters/>}/>
 
         <Route path= "/api/:input/:name" element={<Monster/>}/>
-
       </Routes>
     </div>
   );
