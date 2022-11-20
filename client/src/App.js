@@ -4,19 +4,23 @@ import FormInput from './Components/displays/FormInput';
 import Monsters from './Components/results/Monsters';
 import Monster from './Components/results/Monster';
 import Banner from './Components/displays/Banner';
+import Linkslist from './Components/displays/Linkslist';
 
 function App() {
   return (
     <div>
       
-      <Banner/>
+      
 
       <Routes>
+        <Route path='/' element={<><Banner/>
+                                <Linkslist/></>}/>
+
         <Route path='/form' element={<FormInput/>}/>
 
-        <Route path= "/:input" element={<Monsters/>}/>
+        <Route path= "/api/:input" element={<Monsters/>}/>
 
-        <Route path= "/:input/:name" element={<Monster/>}/>
+        <Route path= "/api/:input/:name" element={<Monster/>}/>
 
       </Routes>
     </div>
