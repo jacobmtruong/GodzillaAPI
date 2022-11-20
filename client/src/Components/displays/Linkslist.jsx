@@ -18,26 +18,38 @@ const Linkslist = () => {
                     <tbody>
                         <tr>
                             <td>name</td>
+                            <td>Monster's name</td>
+                            <td>String</td>
                         </tr>
 
                         <tr>
                             <td>imgUrl</td>
+                            <td>Monster's image</td>
+                            <td>String</td>
                         </tr>
 
                         <tr>
                             <td>firstAppear</td>
+                            <td>Monster's first appeared on screen</td>
+                            <td>String</td>
                         </tr>
 
                         <tr>
                             <td>level</td>
+                            <td>Monster's power level</td> 
+                            <td>String</td>
                         </tr>
 
                         <tr>
                             <td>yearCreated</td>
+                            <td>Year monster was created</td>
+                            <td>Number</td>
                         </tr>
-                        
+
                         <tr>
                             <td>link</td>
+                            <td>Monster's descriptive information</td>
+                            <td>String</td>
                         </tr>
                     </tbody>
                 </table>
