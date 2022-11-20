@@ -27,7 +27,7 @@ const Monster = () => {
                 console.log(err, { replace: true })
             })
 
-    }, [input])
+    }, [input, name])
 
     return (
         <div>

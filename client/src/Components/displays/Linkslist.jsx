@@ -6,7 +6,7 @@ const Linkslist = () => {
     function FieldReference() {
         return (
             <>
-                <h1>Field Reference</h1>
+                <p className='fieldreference'>Field Reference</p>
                 <table>
                     <thead>
                         <tr>
@@ -61,7 +61,7 @@ const Linkslist = () => {
     return (
         <div className='list-container'>
             <div className='list-children-one'>
-                <ul>
+                <ul style={{margin: '0'}}>
                     <li>Get the full list of Monster: <span className='api-route'>/api/monster</span></li>
                     <li>Query the API for a specific Monster by name by passing the name in the URL: <span className='api-route'>/api/monster/name</span></li>
                     <p className='example'>Capitlize the first intial of the monster's name. Examples:</p>
