@@ -10,11 +10,11 @@ function App() {
   return (
     <div>
       
-      
-
       <Routes>
-        <Route path='/' element={<><Banner/>
-                                <Linkslist/></>}/>
+        <Route path='/' element={<>
+                                <Banner/>
+                                <Linkslist/>
+                                </>}/>
 
         <Route path='/form' element={<FormInput/>}/>
 
