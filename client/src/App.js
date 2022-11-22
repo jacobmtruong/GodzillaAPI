@@ -5,6 +5,7 @@ import Monsters from './Components/results/Monsters';
 import Monster from './Components/results/Monster';
 import Banner from './Components/displays/Banner';
 import Linkslist from './Components/displays/Linkslist';
+import PlaygroundBanner from './Components/displays/PlaygroundBanner';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
         <Route path='/form' element={<FormInput/>}/>
 
-        <Route path='/playground' element={<Banner/>}/>
+        <Route path='/playground' element={<PlaygroundBanner/>}/>
 
         <Route path= "/api/:input" element={<Monsters/>}/>
 

@@ -4,13 +4,16 @@ import { Link } from 'react-router-dom'
 import icon from '../images/icon.png'
 import { useNavigate } from 'react-router-dom'
 
-const Banner = () => {
+const PlaygroundBanner = () => {
     const navigate = useNavigate()
 
     const playgroundHandler = () => {
         window.open('/playground')
     }
 
+    const homeHandler = () => {
+        navigate("/")
+    }   
 
     return (
         <div className='banner-container'>
@@ -19,11 +22,12 @@ const Banner = () => {
                 <h1 className='logo' style={{ fontSize: '60px' }}>Godzillapi
                     <span style={{ fontSize: '15px', fontWeight: '0' }}> A simple project by <Link className='profile'>Jacob Truong</Link></span>
                 </h1>
-                <h4 className='logo' style={{ fontSize: '30px' }}>ゴジラのAPI</h4>
-                    <button className='playground' onClick={playgroundHandler}>Go to API Playground</button>
+                <h4 className='logo' style={{ fontSize: '35px' }}>PLAYGROUND</h4>
+                    <button className='playground' onClick={homeHandler} style={{marginRight: '10px'}}>Home</button>
             </div>
         </div>
     )
 }
 
-export default Banner
+
+export default PlaygroundBanner
