@@ -7,10 +7,6 @@ import { useNavigate } from 'react-router-dom'
 const PlaygroundBanner = () => {
     const navigate = useNavigate()
 
-    const playgroundHandler = () => {
-        window.open('/playground')
-    }
-
     const homeHandler = () => {
         navigate("/")
     }   

@@ -2,15 +2,12 @@ import React from 'react'
 import '../styles/banner-style.css'
 import { Link } from 'react-router-dom'
 import icon from '../images/icon.png'
-import { useNavigate } from 'react-router-dom'
+
 
 const Banner = () => {
-    const navigate = useNavigate()
-
     const playgroundHandler = () => {
         window.open('/playground')
     }
-
 
     return (
         <div className='banner-container'>
