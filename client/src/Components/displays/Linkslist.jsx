@@ -79,9 +79,16 @@ const Linkslist = () => {
 
                         <tr>
                             <td>GET</td>
-                            <td>/api/monster/name</td>
+                            <td>/api/monster/name/:name</td>
                             <td>Returns an array of Monster based on their name.
                                 The array will contain one Monster.</td>
+                        </tr>
+
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/monster/year/:year</td>
+                            <td>Returns an array of Monster based on the year they were created.
+                                The array will contain one or more Monsters.</td>
                         </tr>
                     </tbody>
                 </table>

@@ -31,6 +31,12 @@ module.exports = {
         .catch(err => res.json({ message: 'There was an error', serverError: err }))
     },
 
+    findMonsterByYearCreated: (req, res) => {
+        Monster.find({yearCreated: req.params.year})
+        .then(monsterWithYearCreated => res.json(monsterWithYearCreated))
+        .catch(err => res.json({ message: 'There was an error', serverError: err }))
+    },
+
     //update a monster
     updateMonster: (req, res) => {
         Monster.findByIdAndUpdate(req.params.id, red.body, { new: true, runValidators: true })

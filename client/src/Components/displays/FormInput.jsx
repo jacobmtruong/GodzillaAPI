@@ -4,7 +4,7 @@ import PlayMonsters from './PlayMonsters'
 import '../styles/forminput.css'
 
 const FormInput = () => {
-  const [monster, setMonster] = useState('')
+  const [year, setYear] = useState('')
   const [name, setName] = useState('')
 
   const [error, setError] = useState(null)
@@ -15,11 +15,14 @@ const FormInput = () => {
 
   const MonsterSubmitHandler = (e) => {
     e.preventDefault()
-    if (monster === '') {
+    if (year === '') {
       return
     }
-    axios.get(`http://localhost:8000/api/${monster}`)
+    axios.get(`http://localhost:8000/api/monster/year/${year}`)
       .then(res => {
+        if (res.data == 0) {
+          setError("Cannot find the year monster was created in our database")
+        } else {
         let result = res.data
         for (let i = 0; i < result.length; i++) {
           delete result[i]["_id"]
@@ -28,9 +31,8 @@ const FormInput = () => {
           delete result[i]["__v"]
         }
         setResult(result)
-      })
+      }})
       .catch(err => {
-        setError(err.message)
         console.log(err, { replace: true })
       })
   }
@@ -40,7 +42,7 @@ const FormInput = () => {
     if (name === '') {
       return
     }
-    axios.get(`http://localhost:8000/api/monster/${name}`)
+    axios.get(`http://localhost:8000/api/monster/name/${name}`)
       .then(res => {
         if (res.data == 0) {
           setError("Cannot find the Monster's name in our database")
@@ -56,7 +58,6 @@ const FormInput = () => {
         }
       })
       .catch(err => {
-        setError(err.message)
         console.log(err, { replace: true })
       })
   }
@@ -67,12 +68,12 @@ const FormInput = () => {
     <div className='form-container'>
       <div className='form-small-container'>
         <form onSubmit={MonsterSubmitHandler}>
-          <span className='link-input'>localhost:3000/api/</span><input type="text" onChange={(e) => setMonster(e.target.value)} placeholder='monster' value={monster} />
+          <span className='link-input'>localhost:3000/api/monster/year/</span><input type="number" onChange={(e) => setYear(e.target.value)} placeholder=':year' value={year} />
           <button className='form-button'>Submit</button>
         </form>
 
         <form onSubmit={NameSubmitHandler}>
-          <span className='link-input'>localhost:3000/api/monster/</span><input type="text" onChange={(e) => setName(e.target.value)} placeholder='name' value={name} />
+          <span className='link-input'>localhost:3000/api/monster/name/</span><input type="text" onChange={(e) => setName(e.target.value)} placeholder=':name' value={name} />
           <button className='form-button'>Submit</button>
         </form>
       </div>
