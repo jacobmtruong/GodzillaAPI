@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid black; */
+    outline: 1px solid black;
 }
 
 .list-container {
@@ -12,11 +12,11 @@
     justify-content: center;
 }
 
-.list-children-one {
-    width: 70%;
+
+.list-children-one ul:nth-child(2) {
     border: 2px solid black;
-    border-radius: 20px;
-    padding: 30px;
+    padding: 20px 40px;
+    width: fit-content;
 }
 
 .list-children-three {
