@@ -19,6 +19,8 @@ function App() {
 
         <Route path='/form' element={<FormInput/>}/>
 
+        <Route path='/playground' element={<Banner/>}/>
+
         <Route path= "/api/:input" element={<Monsters/>}/>
 
         <Route path= "/api/:input/:name" element={<Monster/>}/>

@@ -76,6 +76,13 @@ const Linkslist = () => {
                             <td>/api/monster</td>
                             <td>Returns an array of all Monster in our database.</td>
                         </tr>
+
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/monster/name</td>
+                            <td>Returns an array of Monster based on their name.
+                                The array will contain one Monster.</td>
+                        </tr>
                     </tbody>
                 </table>
             </>
@@ -98,7 +105,7 @@ const Linkslist = () => {
             </div>
 
             <div className='list-children-three'>
-                <Endpoints/>
+                <Endpoints />
             </div>
 
             <div className='list-children-two'>
