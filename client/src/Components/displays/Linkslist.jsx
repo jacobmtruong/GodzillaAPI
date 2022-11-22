@@ -17,37 +17,37 @@ const Linkslist = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span className='fieldname'>name</span></td>
+                            <td>name</td>
                             <td>Monster's name</td>
                             <td>String</td>
                         </tr>
 
                         <tr>
-                            <td><span className='fieldname'>imgUrl</span></td>
+                            <td>imgUrl</td>
                             <td>Monster's image</td>
                             <td>String</td>
                         </tr>
 
                         <tr>
-                            <td><span className='fieldname'>firstAppear</span></td>
+                            <td>firstAppear</td>
                             <td>Monster's first appeared on screen</td>
                             <td>String</td>
                         </tr>
 
                         <tr>
-                            <td><span className='fieldname'>level</span></td>
+                            <td>level</td>
                             <td>Monster's power level</td>
                             <td>String</td>
                         </tr>
 
                         <tr>
-                            <td><span className='fieldname'>yearCreated</span></td>
+                            <td>yearCreated</td>
                             <td>Year monster was created</td>
                             <td>Number</td>
                         </tr>
 
                         <tr>
-                            <td><span className='fieldname'>link</span></td>
+                            <td>link</td>
                             <td>Monster's descriptive information</td>
                             <td>String</td>
                         </tr>
@@ -58,10 +58,34 @@ const Linkslist = () => {
     }
 
 
+    function Endpoints() {
+        return (
+            <>
+                <p className='fieldreference' style={{ marginBottom: '20px' }}>API Calls & Endpoints</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>HTTP Medthod</th>
+                            <th>Endpoint</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/monster</td>
+                            <td>Returns an array of all Monster in our database.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </>
+        )
+    }
+
     return (
         <div className='list-container'>
             <div className='list-children-one'>
-                <p className='fieldreference'>Documentation</p>
+                <p className='fieldreference' style={{ marginBottom: '20px' }}>Documentation</p>
                 <ul style={{ margin: '0' }}>
                     <li>Get the full list of Monster: <span className='api-route'>/api/monster</span></li>
                     <li>Query the API for a specific Monster by name by passing the name in the URL: <span className='api-route'>/api/monster/name</span></li>
@@ -71,6 +95,10 @@ const Linkslist = () => {
                         <li className='highlighted'>/api/monster/KingCaesar</li>
                     </ul>
                 </ul>
+            </div>
+
+            <div className='list-children-three'>
+                <Endpoints/>
             </div>
 
             <div className='list-children-two'>

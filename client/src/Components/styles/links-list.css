@@ -4,12 +4,12 @@
 
 .list-container {
     width: 90%;
-    margin: auto; 
+    margin: auto;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .list-children-one {
@@ -19,7 +19,13 @@
     padding: 30px;
 }
 
+.list-children-three {
+    width: fit-content;
+}
 
+.list-children-two {
+    width: fit-content;
+}
 
 li {
     font-size: 20px;
@@ -39,8 +45,16 @@ li {
 }
 
 table {
-    width: 50%;
-    border-radius: 1em;
+    width: 100%;
+}
+
+th {
+    font-weight: 900;
+    font-size: 17px;
+}
+
+td {
+    font-weight: 500;
 }
 
 table,
@@ -48,17 +62,35 @@ th,
 td {
     border: 2px solid black;
     border-collapse: collapse;
-    padding: 10px 10px;
+    padding: 10px 20px;
 }
+
+td:first-child {
+    text-align: center;
+    background-color: rgba(224, 251, 251, 0.792);
+}
+
+/* td:not(:first-child):not(:last-child) .list-children-two{
+    width: 300px;
+}
+
+td:last-child .list-children-two{
+    padding-left: 20px;
+    width: 100px;
+    text-align: center;
+    ;
+} */
+
+/* td:last-child .list-children-three {
+    width: 900px;
+}
+td:first-child .list-children-three {
+    width: 900px;
+} */
 
 
 .fieldreference {
     font-family: 'Godzilla';
     font-size: 35px;
     margin: 0;
-}
-
-.fieldname {
-    background-color: rgba(224, 251, 251, 0.792);
-    padding: 2px 8px;
 }
