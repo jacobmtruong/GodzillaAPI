@@ -17,7 +17,7 @@ const PlayMonsters = (props) => {
                             <p><span className='titles'>First Appear</span>: {item.firstAppear}</p>
                             <p><span className='titles'>Year Created</span>: {item.yearCreated}</p>
                             <p><span className='titles'>Level</span>: {item.level}</p>
-                            <a href={item.link} style={{ margin: '0' }}>More about {item.name}</a>
+                            <a href={item.link} style={{ margin: '0' }} className="learnmore-button">Learn more</a>
                         </div>
                     )
                 }) : <p>{error}</p>
