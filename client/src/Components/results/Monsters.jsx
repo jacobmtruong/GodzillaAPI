@@ -28,7 +28,7 @@ const Monsters = () => {
     return (
         <div>
             {
-                <pre>{JSON.stringify(result, null, 1)}</pre>
+                <pre>{JSON.stringify(result,null,1)}</pre>
             }
         </div>
     )

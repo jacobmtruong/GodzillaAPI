@@ -12,11 +12,11 @@ const PlayMonsters = (props) => {
                 result.map((item, index) => {
                     return (
                         <div key={index} className='monster-card'>
+                            <p style={{fontSize: '32px', fontWeight: '600'}}>{item.name}</p>
                             <img src={item.imgUrl} alt="img" className='monster-image'/>
-                            <p>Name: {item.name}</p>
-                            <p>First Appear: {item.firstAppear}</p>
-                            <p>Level: {item.level}</p>
-                            <p>Year Created: {item.yearCreated}</p>
+                            <p><span className='titles'>First Appear</span>: {item.firstAppear}</p>
+                            <p><span className='titles'>Year Created</span>: {item.yearCreated}</p>
+                            <p><span className='titles'>Level</span>: {item.level}</p>
                             <a href={item.link} style={{ margin: '0' }}>More about {item.name}</a>
                         </div>
                     )

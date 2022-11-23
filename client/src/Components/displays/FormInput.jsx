@@ -68,12 +68,12 @@ const FormInput = () => {
     <div className='form-container'>
       <div className='form-small-container'>
         <form onSubmit={MonsterSubmitHandler}>
-          <span className='link-input'>localhost:3000/api/monster/year/</span><input type="number" onChange={(e) => setYear(e.target.value)} placeholder=':year' value={year} />
+          <span className='link-input'>localhost:3000/api/monster/year/</span><input style={{width: '55%'}} type="number" onChange={(e) => setYear(e.target.value)} placeholder=':year' value={year} />
           <button className='form-button'>Submit</button>
         </form>
 
         <form onSubmit={NameSubmitHandler}>
-          <span className='link-input'>localhost:3000/api/monster/name/</span><input type="text" onChange={(e) => setName(e.target.value)} placeholder=':name' value={name} />
+          <span className='link-input'>localhost:3000/api/monster/name/</span><input style={{width: '53.6%'}} type="text" onChange={(e) => setName(e.target.value)} placeholder=':name' value={name} />
           <button className='form-button'>Submit</button>
         </form>
       </div>
