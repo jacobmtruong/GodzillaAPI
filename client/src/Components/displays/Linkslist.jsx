@@ -105,8 +105,9 @@ const Linkslist = () => {
                     <li>Query the API for a specific Monster by name by passing the name in the URL: <span className='api-route'>/api/monster/name</span></li>
                     <p className='example'>Capitlize the first intial of the monster's name. Examples:</p>
                     <ul>
-                        <li className='highlighted'>/api/monster/Mechagodzilla</li>
-                        <li className='highlighted'>/api/monster/KingCaesar</li>
+                        <li className='highlighted'>/api/monster/name/Mechagodzilla</li>
+                        <li className='highlighted'>/api/monster/name/KingCaesar</li>
+                        <li className='highlighted'>/api/monster/year/1994</li>
                     </ul>
                 </ul>
             </div>
