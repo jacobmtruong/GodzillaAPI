@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 
 
 // Bring in cors 
@@ -18,14 +18,5 @@ app.get('/api', (req, res) => res.json("Hello, world!"));
 
 
 // Start server 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
-// server static assets if in production
-if(process.env.NODE_ENV === 'production'){    
-    app.use(express.static('frontend/build'))  // set static folder 
-    //returning frontend for any route other than api 
-    app.get('*',(req,res)=>{     
-        res.sendFile (path.resolve(__dirname,'frontend','build',         
-                      'index.html' ));    
-    });
-}
